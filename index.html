@@ -433,6 +433,44 @@
       .products, .charity, .newsletter { padding: 64px 24px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
     }
+
+    /* GALLERY */
+    .gallery {
+      padding: 80px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 40px;
+    }
+    .gallery-item {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0);
+      transition: background 0.3s;
+    }
+    .gallery-item:hover::after {
+      background: rgba(0,0,0,0.05);
+    }
   </style>
 </head>
 <body>
@@ -529,7 +567,259 @@
         </div>
       </div>
     </div>
+  
+  <section class="gallery" id="collection-full">
+    <div class="section-header">
+      <div>
+        <div class="label">Collection Complète</div>
+        <h2>Tous les pieces.</h2>
+      </div>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/collection/img_00122f73ae03.jpg" alt="img_00122f73ae03.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_0d3eda8869da.jpg" alt="img_0d3eda8869da.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_0f2577c46bea.jpg" alt="img_0f2577c46bea.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_0f4e009c12f1.jpg" alt="img_0f4e009c12f1.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_101290033297.jpg" alt="img_101290033297.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_1270eda24066.jpg" alt="img_1270eda24066.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_130ad24da0a5.jpg" alt="img_130ad24da0a5.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_1310bb79627d.jpg" alt="img_1310bb79627d.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_15bab7960dfa.jpg" alt="img_15bab7960dfa.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_1a71924c8608.jpg" alt="img_1a71924c8608.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_1fca4c8c594b.jpg" alt="img_1fca4c8c594b.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_216b0af59ea3.jpg" alt="img_216b0af59ea3.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_238bb38f7bc7.jpg" alt="img_238bb38f7bc7.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_240c36a83c19.jpg" alt="img_240c36a83c19.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_2558ebd16254.jpg" alt="img_2558ebd16254.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_264a03882b08.jpg" alt="img_264a03882b08.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_268767c5dd0a.jpg" alt="img_268767c5dd0a.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_28895d926d99.jpg" alt="img_28895d926d99.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_2b1c62583ae9.jpg" alt="img_2b1c62583ae9.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_2b67a6a9fa31.jpg" alt="img_2b67a6a9fa31.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_2bb5599b8542.jpg" alt="img_2bb5599b8542.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_38312cbb9d7a.jpg" alt="img_38312cbb9d7a.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_39a99e203145.jpg" alt="img_39a99e203145.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_3cea9d876444.jpg" alt="img_3cea9d876444.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_4211e08ddc86.jpg" alt="img_4211e08ddc86.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_426eeb032b1d.jpg" alt="img_426eeb032b1d.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_4312fbe38598.jpg" alt="img_4312fbe38598.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_478d199dabc9.jpg" alt="img_478d199dabc9.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_47e30b1bef5e.jpg" alt="img_47e30b1bef5e.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_511d13c68acb.jpg" alt="img_511d13c68acb.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_5a028406e08b.jpg" alt="img_5a028406e08b.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_5d8dd917c820.jpg" alt="img_5d8dd917c820.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_6301ec010d4c.jpg" alt="img_6301ec010d4c.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_6319243a91c9.jpg" alt="img_6319243a91c9.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_6412e0ec1192.jpg" alt="img_6412e0ec1192.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_674bfbc18a96.jpg" alt="img_674bfbc18a96.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_6977343320a4.jpg" alt="img_6977343320a4.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_6abd1dcd52f3.jpg" alt="img_6abd1dcd52f3.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_6c4cf6ce1529.jpg" alt="img_6c4cf6ce1529.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_6f647def8c3b.jpg" alt="img_6f647def8c3b.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_71a6d244ef23.jpg" alt="img_71a6d244ef23.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_80af495c41f2.jpg" alt="img_80af495c41f2.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_85a94b6bf931.jpg" alt="img_85a94b6bf931.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_864ab992abb4.jpg" alt="img_864ab992abb4.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_86863c0f92a5.jpg" alt="img_86863c0f92a5.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_8ad8f547ed53.jpg" alt="img_8ad8f547ed53.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_8ced088d7355.jpg" alt="img_8ced088d7355.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_8ea20b90f407.jpg" alt="img_8ea20b90f407.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_933ad5445494.jpg" alt="img_933ad5445494.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_94db1c3a138f.jpg" alt="img_94db1c3a138f.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_9647edc0148a.jpg" alt="img_9647edc0148a.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_975c1d80e7fc.jpg" alt="img_975c1d80e7fc.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_9c1d2c6add0a.jpg" alt="img_9c1d2c6add0a.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_9de26628c4d2.jpg" alt="img_9de26628c4d2.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_a490e7b7d7ee.jpg" alt="img_a490e7b7d7ee.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_a8576006d9a2.jpg" alt="img_a8576006d9a2.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_aba756640617.jpg" alt="img_aba756640617.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_ae2a24377720.jpg" alt="img_ae2a24377720.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_af398c5f8cd9.jpg" alt="img_af398c5f8cd9.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_b2605c1187e7.jpg" alt="img_b2605c1187e7.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_baaaab523a61.jpg" alt="img_baaaab523a61.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_bede771554bf.jpg" alt="img_bede771554bf.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_bfd7c03c68ad.jpg" alt="img_bfd7c03c68ad.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_c17e97dfbb90.jpg" alt="img_c17e97dfbb90.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_c3e1218afe8e.jpg" alt="img_c3e1218afe8e.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_c3e6c45e40ed.jpg" alt="img_c3e6c45e40ed.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_cab14384f954.jpg" alt="img_cab14384f954.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_cae7b226af50.jpg" alt="img_cae7b226af50.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_cd27d7d415fd.jpg" alt="img_cd27d7d415fd.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_d0c0c008407b.jpg" alt="img_d0c0c008407b.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_d2cf6e45c22e.jpg" alt="img_d2cf6e45c22e.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_d301f37f0129.jpg" alt="img_d301f37f0129.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_d5d86728a89a.jpg" alt="img_d5d86728a89a.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_d8254d83198a.jpg" alt="img_d8254d83198a.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_d8f936bcece0.jpg" alt="img_d8f936bcece0.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_ddf8cd9b631e.jpg" alt="img_ddf8cd9b631e.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_e985006be820.jpg" alt="img_e985006be820.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_ebbb150463dc.jpg" alt="img_ebbb150463dc.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_f049af6ce637.jpg" alt="img_f049af6ce637.jpg" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/collection/img_f5562b001311.jpg" alt="img_f5562b001311.jpg" loading="lazy" />
+        </div>
+    </div>
   </section>
+
+</section>
 
   <section class="products" id="drop02">
     <div class="section-header">
