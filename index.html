@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeste et Âme — Minimalist Luxury from Paris</title>
+  <meta name="description" content="Zeste et Âme is a minimalist luxury fashion brand born in Paris. Understated design, refined fabrics, quiet confidence." />
+  <style>
+    :root {
+      --bg: #f6f4f0;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #8c7b6b;
+      --line: rgba(0,0,0,0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 48px;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+    nav .logo {
+      font-size: 14px;
+      letter-spacing: 0.35em;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    nav ul li a {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    nav ul li a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+    }
+    .hero .brand-mark {
+      font-size: 12px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 96px);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      line-height: 1.05;
+      text-transform: uppercase;
+      max-width: 900px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+    }
+    .hero .subtitle {
+      margin-top: 28px;
+      font-size: 15px;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .hero .scroll-cue {
+      margin-top: 64px;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      opacity: 0.6;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 96px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section.alt {
+      background: #edeae4;
+      max-width: none;
+      padding: 96px 48px;
+    }
+    .alt .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+      margin-bottom: 32px;
+    }
+
+    /* PHILOSOPHY */
+    .philosophy p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+
+    /* LOOKBOOK GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .grid figure {
+      aspect-ratio: 3/4;
+      background: #d9d5ce;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .grid figure .caption {
+      background: rgba(255,255,255,0.92);
+      padding: 10px 14px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .grid figure:nth-child(1) { background: #c8c3ba; }
+    .grid figure:nth-child(2) { background: #b8b2a8; }
+    .grid figure:nth-child(3) { background: #a9a399; }
+    .grid figure:nth-child(4) { background: #9a9286; }
+
+    /* VALUES */
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 48px;
+      margin-top: 32px;
+    }
+    .value h3 {
+      font-size: 13px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .value p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* NEWSLETTER */
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      max-width: 520px;
+      margin-top: 32px;
+    }
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid #ccc;
+      background: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      color: var(--text);
+    }
+    .newsletter-form input[type="email"]::placeholder {
+      color: #aaa;
+      letter-spacing: 0.1em;
+    }
+    .newsletter-form button {
+      padding: 14px 32px;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      font-family: inherit;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .newsletter-form button:hover {
+      background: var(--accent);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    footer .brand {
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    footer .links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    footer .links li a {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 18px 24px; }
+      nav ul { gap: 16px; }
+      section, section.alt { padding: 64px 24px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Zeste et Âme</div>
+    <ul>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="brand-mark">Paris — Since 2026</div>
+    <h1>Zeste <em>&</em> Âme</h1>
+    <p class="subtitle">Quiet luxury. Refined essentials. Designed for those who prefer less, but never compromise.</p>
+    <div class="scroll-cue">Explore ↓</div>
+  </header>
+
+  <section id="collection">
+    <div class="section-label">Collection</div>
+    <h2 class="section-title">Quietly crafted.<br/>Intentionally worn.</h2>
+    <div class="grid">
+      <figure>
+        <div class="caption">Tonal Cotton Overshirt — Sand</div>
+      </figure>
+      <figure>
+        <div class="caption">Wool-Blend Trousers — Charcoal</div>
+      </figure>
+      <figure>
+        <div class="caption">Silk-Cashmere Scarf — Ivory</div>
+      </figure>
+      <figure>
+        <div class="caption">Leather Cardigan — Espresso</div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="philosophy" class="alt">
+    <div class="inner">
+      <div class="section-label">Philosophy</div>
+      <div class="section-title">The zest of creation.<br/>The soul of restraint.</div>
+      <div class="philosophy">
+        <p>Zeste et Âme was born in Paris from a simple belief: luxury does not need to announce itself. Our pieces are designed to live in your wardrobe quietly — refined fabrics, considered silhouettes, a restraint that lets the work speak.</p>
+        <p>Every garment is developed with attention to proportion, material, and longevity. We source responsibly, produce in limited runs, and design collections that transcend seasons.</p>
+      </div>
+      <div class="values">
+        <div class="value">
+          <h3>Provenance</h3>
+          <p>Designed in Paris, made with European mills and artisans who share our standards.</p>
+        </div>
+        <div class="value">
+          <h3>Material</h3>
+          <p>Natural and noble fibers only — cotton, wool, silk, cashmere — chosen for feel and durability.</p>
+        </div>
+        <div class="value">
+          <h3>Longevity</h3>
+          <p>We design to last. Our garments are built to improve with age, not to follow a season.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Join the inner circle.</h2>
+    <p style="color: var(--muted); max-width: 480px; line-height: 1.7; font-size: 15px;">Be the first to know about new collections, private viewings, and launch dates.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you — we will be in touch.');">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="brand">© 2026 Zeste et Âme</div>
+    <ul class="links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Stockists</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
