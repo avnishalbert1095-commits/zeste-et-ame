@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeste et Âme — Minimalist Luxury from Paris</title>
-  <meta name="description" content="Zeste et Âme is a minimalist luxury fashion brand born in Paris. Understated design, refined fabrics, quiet confidence." />
+  <title>Zeste et Âme Paris — Essentials with Soul</title>
+  <meta name="description" content="Zeste et Âme Paris. Sport-luxe essentials with soul. Heavyweight fabrics. Made with purpose. Drop 001 Charity Club is live." />
   <style>
     :root {
-      --bg: #f6f4f0;
+      --bg: #f5f3ef;
       --text: #1a1a1a;
       --muted: #6b6b6b;
       --accent: #8c7b6b;
       --line: rgba(0,0,0,0.08);
+      --sand: #d4c9b8;
+      --stone: #b8afa2;
+      --charcoal: #4a4a4a;
+      --olive: #6b6b4f;
+      --black: #1a1a1a;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -28,55 +33,67 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 48px;
+      padding: 20px 40px;
       border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
       background: var(--bg);
       z-index: 10;
+      backdrop-filter: blur(10px);
     }
     nav .logo {
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 0.35em;
       font-weight: 500;
       text-transform: uppercase;
     }
     nav ul {
       display: flex;
-      gap: 32px;
+      gap: 28px;
       list-style: none;
     }
     nav ul li a {
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
       transition: color 0.2s;
     }
     nav ul li a:hover { color: var(--text); }
+    .cart-btn {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 8px 16px;
+      transition: all 0.2s;
+    }
+    .cart-btn:hover { border-color: var(--text); color: var(--text); }
 
     /* HERO */
     .hero {
-      min-height: 88vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 0 24px;
+      background: linear-gradient(180deg, #e8e4dc 0%, var(--bg) 100%);
     }
     .hero .brand-mark {
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.5em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 24px;
     }
     .hero h1 {
-      font-size: clamp(42px, 8vw, 96px);
+      font-size: clamp(48px, 10vw, 120px);
       font-weight: 300;
-      letter-spacing: 0.08em;
-      line-height: 1.05;
+      letter-spacing: 0.06em;
+      line-height: 0.95;
       text-transform: uppercase;
       max-width: 900px;
     }
@@ -84,118 +101,276 @@
       font-style: italic;
       font-weight: 300;
     }
-    .hero .subtitle {
-      margin-top: 28px;
-      font-size: 15px;
+    .hero .tagline {
+      margin-top: 32px;
+      font-size: 14px;
       color: var(--muted);
-      letter-spacing: 0.15em;
-      max-width: 480px;
-      line-height: 1.7;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      max-width: 520px;
+      line-height: 1.6;
     }
-    .hero .scroll-cue {
-      margin-top: 64px;
+    .hero .cta {
+      margin-top: 48px;
+      display: flex;
+      gap: 16px;
+    }
+    .btn-primary {
+      padding: 16px 40px;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      font-family: inherit;
       font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--muted);
-      opacity: 0.6;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--accent); }
+    .btn-secondary {
+      padding: 16px 40px;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--text);
+      font-family: inherit;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: var(--text); color: var(--bg); }
+
+    /* MARQUEE */
+    .marquee {
+      background: var(--text);
+      color: var(--bg);
+      padding: 16px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-text {
+      display: inline-block;
+      animation: marquee 30s linear infinite;
+      font-size: 12px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
-    /* SECTIONS */
-    section {
-      padding: 96px 48px;
+    /* DROP BANNER */
+    .drop-banner {
+      background: var(--black);
+      color: var(--bg);
+      padding: 48px 40px;
+      text-align: center;
+    }
+    .drop-banner .drop-label {
+      font-size: 11px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .drop-banner h2 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .drop-banner p {
+      font-size: 14px;
+      color: rgba(245,243,239,0.7);
+      letter-spacing: 0.1em;
+      max-width: 600px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+
+    /* PRODUCT GRID */
+    .products {
+      padding: 80px 40px;
       max-width: 1200px;
       margin: 0 auto;
     }
-    section.alt {
-      background: #edeae4;
-      max-width: none;
-      padding: 96px 48px;
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
     }
-    .alt .inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-label {
+    .section-header .label {
       font-size: 11px;
       letter-spacing: 0.4em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 20px;
-    }
-    .section-title {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 300;
-      letter-spacing: 0.06em;
-      line-height: 1.2;
-      margin-bottom: 32px;
-    }
-
-    /* PHILOSOPHY */
-    .philosophy p {
-      font-size: 17px;
-      line-height: 1.8;
-      color: var(--muted);
-      max-width: 640px;
-      margin-bottom: 16px;
-    }
-
-    /* LOOKBOOK GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 40px;
-    }
-    .grid figure {
-      aspect-ratio: 3/4;
-      background: #d9d5ce;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-      cursor: pointer;
-    }
-    .grid figure .caption {
-      background: rgba(255,255,255,0.92);
-      padding: 10px 14px;
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text);
-    }
-    .grid figure:nth-child(1) { background: #c8c3ba; }
-    .grid figure:nth-child(2) { background: #b8b2a8; }
-    .grid figure:nth-child(3) { background: #a9a399; }
-    .grid figure:nth-child(4) { background: #9a9286; }
-
-    /* VALUES */
-    .values {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 48px;
-      margin-top: 32px;
-    }
-    .value h3 {
-      font-size: 13px;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
       margin-bottom: 12px;
     }
-    .value p {
-      font-size: 14px;
+    .section-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .product-card:hover { transform: translateY(-4px); }
+    .product-card .image {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-card .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .product-card:hover .image img { transform: scale(1.03); }
+    .product-card .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--black);
+      color: var(--bg);
+      padding: 6px 12px;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    .product-card .info {
+      padding: 20px;
+    }
+    .product-card .name {
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .product-card .desc {
+      font-size: 12px;
       color: var(--muted);
-      line-height: 1.7;
+      letter-spacing: 0.1em;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .product-card .price {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+    .product-card .price .old {
+      text-decoration: line-through;
+      color: var(--muted);
+      font-weight: 300;
+      margin-left: 8px;
+      font-size: 13px;
+    }
+
+    /* CHARITY SECTION */
+    .charity {
+      background: #edeae4;
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .charity .inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .charity .label {
+      font-size: 11px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .charity h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    .charity p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .impact-item {
+      padding: 24px;
+    }
+    .impact-item .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .impact-item h3 {
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .impact-item p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
     }
 
     /* NEWSLETTER */
+    .newsletter {
+      padding: 80px 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .newsletter .label {
+      font-size: 11px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .newsletter h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+    .newsletter p {
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
     .newsletter-form {
       display: flex;
       gap: 12px;
-      max-width: 520px;
-      margin-top: 32px;
     }
     .newsletter-form input[type="email"] {
       flex: 1;
@@ -217,20 +392,18 @@
       color: var(--bg);
       border: none;
       font-family: inherit;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       cursor: pointer;
       transition: background 0.2s;
     }
-    .newsletter-form button:hover {
-      background: var(--accent);
-    }
+    .newsletter-form button:hover { background: var(--accent); }
 
     /* FOOTER */
     footer {
       border-top: 1px solid var(--line);
-      padding: 40px 48px;
+      padding: 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -238,7 +411,7 @@
       margin: 0 auto;
     }
     footer .brand {
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
     }
@@ -248,16 +421,16 @@
       list-style: none;
     }
     footer .links li a {
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
     }
 
     @media (max-width: 600px) {
-      nav { padding: 18px 24px; }
+      nav { padding: 16px 24px; }
       nav ul { gap: 16px; }
-      section, section.alt { padding: 64px 24px; }
+      .products, .charity, .newsletter { padding: 64px 24px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
     }
   </style>
@@ -267,79 +440,183 @@
   <nav>
     <div class="logo">Zeste et Âme</div>
     <ul>
-      <li><a href="#collection">Collection</a></li>
-      <li><a href="#philosophy">Philosophy</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#drop01">Drop 001</a></li>
+      <li><a href="#drop02">Drop 002</a></li>
+      <li><a href="#mission">Mission</a></li>
     </ul>
+    <a href="#" class="cart-btn">Cart (0)</a>
   </nav>
 
   <header class="hero">
     <div class="brand-mark">Paris — Since 2026</div>
     <h1>Zeste <em>&</em> Âme</h1>
-    <p class="subtitle">Quiet luxury. Refined essentials. Designed for those who prefer less, but never compromise.</p>
-    <div class="scroll-cue">Explore ↓</div>
+    <p class="tagline">Essentials with soul.<br/>Heavyweight fabrics. Made with purpose.</p>
+    <div class="cta">
+      <a href="#drop01" class="btn-primary">Shop Drop 001</a>
+      <a href="#drop02" class="btn-secondary">Discover Drop 002</a>
+    </div>
   </header>
 
-  <section id="collection">
-    <div class="section-label">Collection</div>
-    <h2 class="section-title">Quietly crafted.<br/>Intentionally worn.</h2>
-    <div class="grid">
-      <figure>
-        <div class="caption">Tonal Cotton Overshirt — Sand</div>
-      </figure>
-      <figure>
-        <div class="caption">Wool-Blend Trousers — Charcoal</div>
-      </figure>
-      <figure>
-        <div class="caption">Silk-Cashmere Scarf — Ivory</div>
-      </figure>
-      <figure>
-        <div class="caption">Leather Cardigan — Espresso</div>
-      </figure>
+  <div class="marquee">
+    <span class="marquee-text">
+      4:10 — Courir avec âme — L'effort avec élégance — Sport Club Paris — Essentials with Soul — Heavyweight fabrics — Made in Portugal — 4:10 — Courir avec âme — L'effort avec élégance — Sport Club Paris — Essentials with Soul — Heavyweight fabrics — Made in Portugal —&nbsp;
+    </span>
+  </div>
+
+  <div class="drop-banner" id="drop02">
+    <div class="drop-label">Drop 002 — Coming Soon</div>
+    <h2>Le 4:10<br/>Collection</h2>
+    <p>Three pieces that complete the wardrobe. The overshirt. The trouser. The cap. Built with the same obsession for fabric and detail as Drop 001.</p>
+    <a href="#drop02" class="btn-primary">Notify Me</a>
+  </div>
+
+  <section class="products" id="drop01">
+    <div class="section-header">
+      <div>
+        <div class="label">Drop 001 — Charity Club</div>
+        <h2>The essentials.</h2>
+      </div>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="image">
+          <img src="images/collection/img_39a99e203145.jpg" alt="Longsleeve Sport Club" />
+        </div>
+        <div class="info">
+          <div class="name">Longsleeve — Sport Club</div>
+          <div class="desc">380 GSM heavyweight cotton. Oversized fit. Circular crest embroidery.</div>
+          <div class="price">€79</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="image">
+          <img src="images/collection/img_6301ec010d4c.jpg" alt="4:10 Transit Tee" />
+        </div>
+        <div class="info">
+          <div class="name">4:10 Transit Tee</div>
+          <div class="desc">280–320 GSM garment-dyed cotton. Washed charcoal. Distressed finish.</div>
+          <div class="price">€59</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="image">
+          <img src="images/collection/img_80af495c41f2.jpg" alt="Performance Tee Riviera" />
+        </div>
+        <div class="info">
+          <div class="name">Performance Tee — Riviera</div>
+          <div class="desc">Technical breathable fabric. Laser-cut ventilation. Quick-dry.</div>
+          <div class="price">€69</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="image">
+          <img src="images/collection/img_4211e08ddc86.jpg" alt="1963 Athlétique Tee" />
+        </div>
+        <div class="info">
+          <div class="name">1963 Athlétique Tee</div>
+          <div class="desc">Premium cotton-blend. Reflective logos. Heritage athletic graphic.</div>
+          <div class="price">€59</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="image">
+          <img src="images/collection/img_216b0af59ea3.jpg" alt="Riviera Knit Ringer" />
+        </div>
+        <div class="info">
+          <div class="name">Riviera Knit Ringer</div>
+          <div class="desc">230 GSM Pima cotton. Contrast bound collar. Tone-on-tone ZEÂ embroidery.</div>
+          <div class="price">€59</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="philosophy" class="alt">
+  <section class="products" id="drop02">
+    <div class="section-header">
+      <div>
+        <div class="label">Drop 002 — Preview</div>
+        <h2>Le 4:10<br/>Collection</h2>
+      </div>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="image">
+          <img src="images/drop02/410-transit-tee.png" alt="4:10 Transit Tee Sand" />
+          <div class="badge">New</div>
+        </div>
+        <div class="info">
+          <div class="name">4:10 Transit Tee — Sand</div>
+          <div class="desc">Lightweight technical fabric. "4:10" back graphic. Courir avec âme.</div>
+          <div class="price">€59</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="image">
+          <img src="images/drop02/olive-crest-hoodie.png" alt="Olive Crest Hoodie" />
+          <div class="badge">Hero</div>
+        </div>
+        <div class="info">
+          <div class="name">Crest Hoodie — Olive</div>
+          <div class="desc">420 GSM heavyweight fleece. Relaxed oversized fit. Circular ZEÂ crest embroidery.</div>
+          <div class="price">€129</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="image">
+          <img src="images/drop02/black-zea-cap.png" alt="ZEÂ Cap Washed Black" />
+          <div class="badge">Entry</div>
+        </div>
+        <div class="info">
+          <div class="name">ZEÂ Cap — Washed Black</div>
+          <div class="desc">5-panel structured. Garment-dyed cotton twill. Embossed leather patch.</div>
+          <div class="price">€35</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="charity" id="mission">
     <div class="inner">
-      <div class="section-label">Philosophy</div>
-      <div class="section-title">The zest of creation.<br/>The soul of restraint.</div>
-      <div class="philosophy">
-        <p>Zeste et Âme was born in Paris from a simple belief: luxury does not need to announce itself. Our pieces are designed to live in your wardrobe quietly — refined fabrics, considered silhouettes, a restraint that lets the work speak.</p>
-        <p>Every garment is developed with attention to proportion, material, and longevity. We source responsibly, produce in limited runs, and design collections that transcend seasons.</p>
-      </div>
-      <div class="values">
-        <div class="value">
-          <h3>Provenance</h3>
-          <p>Designed in Paris, made with European mills and artisans who share our standards.</p>
+      <div class="label">Charity Club</div>
+      <h2>Clothes with a conscience.</h2>
+      <p>Every piece in the Charity Club contributes to food, education, and shelter initiatives. We believe the things you wear should do more than just look good — they should do good.</p>
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="icon">🍲</div>
+          <h3>Food</h3>
+          <p>Supporting local food banks and community meal programs.</p>
         </div>
-        <div class="value">
-          <h3>Material</h3>
-          <p>Natural and noble fibers only — cotton, wool, silk, cashmere — chosen for feel and durability.</p>
+        <div class="impact-item">
+          <div class="icon">📚</div>
+          <h3>Education</h3>
+          <p>Funding school supplies and mentorship for young people.</p>
         </div>
-        <div class="value">
-          <h3>Longevity</h3>
-          <p>We design to last. Our garments are built to improve with age, not to follow a season.</p>
+        <div class="impact-item">
+          <div class="icon">🏠</div>
+          <h3>Shelter</h3>
+          <p>Contributing to housing support and emergency shelter services.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Join the inner circle.</h2>
-    <p style="color: var(--muted); max-width: 480px; line-height: 1.7; font-size: 15px;">Be the first to know about new collections, private viewings, and launch dates.</p>
-    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you — we will be in touch.');">
-      <input type="email" placeholder="Your email address" required />
+  <section class="newsletter">
+    <div class="label">Stay close</div>
+    <h2>Join the inner circle.</h2>
+    <p>Be the first to know about new drops, private viewings, and the stories behind the clothes.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci — we will be in touch.');">
+      <input type="email" placeholder="Your email" required />
       <button type="submit">Subscribe</button>
     </form>
   </section>
 
   <footer>
-    <div class="brand">© 2026 Zeste et Âme</div>
+    <div class="brand">© 2026 Zeste et Âme Paris</div>
     <ul class="links">
       <li><a href="#">Instagram</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#">Stockists</a></li>
+      <li><a href="#">Shipping</a></li>
     </ul>
   </footer>
 
